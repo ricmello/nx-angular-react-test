@@ -2,6 +2,9 @@
   "version": 2,
   "projects": {
     "angularapp": "apps/angularapp",
-    "angularapp-e2e": "apps/angularapp-e2e"
+    "angularapp-e2e": "apps/angularapp-e2e",
+    "reactapp": "apps/reactapp",
+    "reactapp-e2e": "apps/reactapp-e2e",
+    "shared-lib": "libs/shared-lib"
   }
 }

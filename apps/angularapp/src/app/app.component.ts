@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {getSharedSubtitle} from "@angular-react-experiment/shared-lib";
 
 @Component({
   selector: 'angular-react-experiment-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularapp';
+  subtitle = getSharedSubtitle();
 }

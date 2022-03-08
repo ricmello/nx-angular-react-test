@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 
 /* eslint-disable */
 
@@ -16,9 +16,9 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
       html {
         -webkit-text-size-adjust: 100%;
         font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-          'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
-          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
-          'Noto Color Emoji';
+        'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+        'Noto Color Emoji';
         line-height: 1.5;
         tab-size: 4;
         scroll-behavior: smooth;
@@ -53,7 +53,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
       }
       pre {
         font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-          'Liberation Mono', 'Courier New', monospace;
+        'Liberation Mono', 'Courier New', monospace;
       }
       svg {
         display: block;
@@ -69,14 +69,14 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
         border-radius: 0.25rem;
         color: rgba(229, 231, 235, 1);
         font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-          'Liberation Mono', 'Courier New', monospace;
+        'Liberation Mono', 'Courier New', monospace;
         overflow: scroll;
         padding: 0.5rem 0.75rem;
       }
 
       .shadow {
         box-shadow: 0 0 #0000, 0 0 #0000, 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
       }
       .rounded {
         border-radius: 1.5rem;
@@ -187,8 +187,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
         margin-top: 1rem;
         padding: 1rem;
         transition-property: background-color, border-color, color, fill, stroke,
-          opacity, box-shadow, transform, filter, backdrop-filter,
-          -webkit-backdrop-filter;
+        opacity, box-shadow, transform, filter, backdrop-filter,
+        -webkit-backdrop-filter;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-duration: 150ms;
         width: 100%;
@@ -197,8 +197,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
         margin-right: 1rem;
         height: 1.5rem;
         transition-property: background-color, border-color, color, fill, stroke,
-          opacity, box-shadow, transform, filter, backdrop-filter,
-          -webkit-backdrop-filter;
+        opacity, box-shadow, transform, filter, backdrop-filter,
+        -webkit-backdrop-filter;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-duration: 150ms;
         width: 1.5rem;
@@ -207,8 +207,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
         flex-grow: 1;
         font-weight: 400;
         transition-property: background-color, border-color, color, fill, stroke,
-          opacity, box-shadow, transform, filter, backdrop-filter,
-          -webkit-backdrop-filter;
+        opacity, box-shadow, transform, filter, backdrop-filter,
+        -webkit-backdrop-filter;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-duration: 150ms;
       }
@@ -220,8 +220,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
         font-weight: 300;
         line-height: 1rem;
         transition-property: background-color, border-color, color, fill, stroke,
-          opacity, box-shadow, transform, filter, backdrop-filter,
-          -webkit-backdrop-filter;
+        opacity, box-shadow, transform, filter, backdrop-filter,
+        -webkit-backdrop-filter;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-duration: 150ms;
       }
@@ -251,16 +251,16 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
         padding: 1.5rem 2rem;
         transition-duration: 300ms;
         transition-property: background-color, border-color, color, fill, stroke,
-          opacity, box-shadow, transform, filter, backdrop-filter,
-          -webkit-backdrop-filter;
+        opacity, box-shadow, transform, filter, backdrop-filter,
+        -webkit-backdrop-filter;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         align-items: center;
         display: flex;
       }
       .button-pill svg {
         transition-property: background-color, border-color, color, fill, stroke,
-          opacity, box-shadow, transform, filter, backdrop-filter,
-          -webkit-backdrop-filter;
+        opacity, box-shadow, transform, filter, backdrop-filter,
+        -webkit-backdrop-filter;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-duration: 150ms;
         flex-shrink: 0;
@@ -385,8 +385,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
         padding: 0.5rem;
         cursor: pointer;
         transition-property: background-color, border-color, color, fill, stroke,
-          opacity, box-shadow, transform, filter, backdrop-filter,
-          -webkit-backdrop-filter;
+        opacity, box-shadow, transform, filter, backdrop-filter,
+        -webkit-backdrop-filter;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-duration: 150ms;
       }
@@ -434,6 +434,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
           <h1>
             <span> Hello there, </span>
             Welcome angularapp 👋
+            <span>{{ subtitle }}</span>
           </h1>
         </div>
 
@@ -844,6 +845,8 @@ nx affected:e2e</pre>
   encapsulation: ViewEncapsulation.None,
 })
 export class NxWelcomeComponent implements OnInit {
+  @Input() subtitle: string = '';
+
   constructor() {}
 
   ngOnInit(): void {}
